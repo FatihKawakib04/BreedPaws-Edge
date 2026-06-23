@@ -6,7 +6,7 @@ function Home() {
       {/* Video Header */}
       <div id="video-header" className="ratio ratio-16x9">
         <div className="video-overlay"></div>
-        <video id="bgvid" playsInline autoPlay muted loop>
+        <video id="bgvid" playsInline autoPlay muted loop poster="/static/videos/placeholder-video.jpg">
           <source src="/static/videos/video1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
