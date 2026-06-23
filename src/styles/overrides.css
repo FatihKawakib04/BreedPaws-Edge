@@ -337,3 +337,33 @@ a, button, .card, .img-fluid, .team-style1, .gallery-img img {
   justify-content: center;
   padding: 40px 0;
 }
+
+/* Sticky navbar configuration */
+#main-nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1030 !important;
+  background-color: #F9BE4F !important;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Home page spacing reset */
+.home-page {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Centering hero video text inside Bootstrap ratio container */
+#video-header.ratio .video-text {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  z-index: 10 !important;
+}

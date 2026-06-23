@@ -72,6 +72,18 @@ function Services() {
     fileInputRef.current?.click();
   };
 
+  const handleReset = () => {
+    if (imagePreviewUrl) {
+      URL.revokeObjectURL(imagePreviewUrl);
+    }
+    setImageFile(null);
+    setImagePreviewUrl(null);
+    setPrediction(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
+
   return (
     <div className="page services-page">
       {/* Jumbotron */}
@@ -146,17 +158,37 @@ function Services() {
                         </div>
                       </div>
                       
-                      <button 
-                        type="submit" 
-                        className="btn btn-primary w-100 py-2.5" 
-                        disabled={isLoading || isModelLoading || !imagePreviewUrl}
-                      >
-                        {isLoading ? (
-                          <>
-                            <i className="fas fa-spinner fa-spin me-2"></i> Memproses...
-                          </>
-                        ) : 'Prediksi Ras'}
-                      </button>
+                      {imagePreviewUrl ? (
+                        <div className="d-flex gap-2">
+                          <button 
+                            type="submit" 
+                            className="btn btn-primary flex-grow-1 py-2.5" 
+                            disabled={isLoading || isModelLoading}
+                          >
+                            {isLoading ? (
+                              <>
+                                <i className="fas fa-spinner fa-spin me-2"></i> Memproses...
+                              </>
+                            ) : 'Prediksi Ras'}
+                          </button>
+                          <button 
+                            type="button" 
+                            className="btn btn-secondary py-2.5 px-4"
+                            onClick={handleReset}
+                            disabled={isLoading}
+                          >
+                            Reset
+                          </button>
+                        </div>
+                      ) : (
+                        <button 
+                          type="submit" 
+                          className="btn btn-primary w-100 py-2.5" 
+                          disabled={isLoading || isModelLoading || !imagePreviewUrl}
+                        >
+                          Prediksi Ras
+                        </button>
+                      )}
                     </form>
                   </div>
                 </div>
