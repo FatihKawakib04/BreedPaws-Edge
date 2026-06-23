@@ -191,7 +191,7 @@ export class ModelService {
       // Bug Fix: Force 3 channels (RGB) during pixel extraction
       const tensor = tf.browser.fromPixels(imgElement, 3);
       const resized = tf.image.resizeBilinear(tensor, [224, 224]);
-      const normalized = resized.toFloat().div(tf.scalar(127.5)).sub(tf.scalar(1.0));
+      const normalized = resized.toFloat().div(tf.scalar(255.0));
       const batched = normalized.expandDims(0);
       return this.model!.predict(batched) as tf.Tensor;
     });

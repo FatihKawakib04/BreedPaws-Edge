@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface GalleryImage {
   src: string;
@@ -39,7 +40,7 @@ function Gallery() {
           </div>
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
-              <li className="breadcrumb-item"><a href="/">Home</a></li>
+              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
               <li className="breadcrumb-item active" aria-current="page">Gallery</li>
             </ol>
           </nav>

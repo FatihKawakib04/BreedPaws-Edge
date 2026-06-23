@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 interface TeamMember {
   name: string;
   nim: string;
@@ -45,7 +47,7 @@ function Team() {
           </div>
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb">
-              <li className="breadcrumb-item"><a href="/">Home</a></li>
+              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
               <li className="breadcrumb-item active" aria-current="page">Team</li>
             </ol>
           </nav>
