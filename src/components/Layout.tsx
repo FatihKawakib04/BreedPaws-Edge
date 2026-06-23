@@ -163,7 +163,7 @@ function Layout() {
           
           <div className="row">
             <div className="credits col-sm-12">
-              <p>Designed by <Link to="/">Fatih | Yordi | Najla</Link></p>
+              <p>Designed by <Link to="/">Fatih Kawakib</Link></p>
             </div>
           </div>
         </div>
