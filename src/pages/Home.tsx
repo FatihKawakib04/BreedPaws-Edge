@@ -4,7 +4,7 @@ function Home() {
   return (
     <div className="page home-page">
       {/* Video Header */}
-      <div id="video-header" className="ratio ratio-16x9">
+      <div id="video-header">
         <div className="video-overlay"></div>
         <video id="bgvid" playsInline autoPlay muted loop>
           <source src="/static/videos/video1.mp4" type="video/mp4" />
