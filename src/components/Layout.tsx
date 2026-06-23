@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { NavLink, Outlet, Link } from 'react-router-dom';
+import SmoothScroll from './SmoothScroll';
 
 function Layout() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -20,7 +21,8 @@ function Layout() {
   };
 
   return (
-    <div className="layout-wrapper">
+    <SmoothScroll>
+      <div className="layout-wrapper">
       {/* Navbar Starts */}
       <nav id="main-nav" className="navbar-expand-xl">
         {/* Start Top Bar */}
@@ -168,6 +170,7 @@ function Layout() {
       </footer>
       {/* Footer Ends */}
     </div>
+    </SmoothScroll>
   );
 }
 
