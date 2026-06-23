@@ -298,4 +298,10 @@ a, button, .card, .img-fluid, .team-style1, .gallery-img img {
   padding-bottom: 0 !important;
 }
 
+/* Fix double chevron bug in accordion cards by disabling the legacy CSS float-based pseudo-element chevron */
+.accordion-cards .card-header::after {
+  display: none !important;
+}
+
+
 
